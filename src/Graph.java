@@ -1,10 +1,16 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.*;
 public class Graph
 {
     HashMap<Integer, Node> nodeLookup = new HashMap<>();
     HashSet<Node> knocked = new HashSet<>();
+
+    public Graph(int size)
+    {
+        for(int i = 1; i <= size; i++)
+        {
+            nodeLookup.put(i, new Node(i));
+        }
+    }
 
     private Node getNode(int id)
     {
@@ -13,11 +19,6 @@ public class Graph
 
     public void addEdge(int source, int destination)
     {
-        if(getNode(source) == null)
-            nodeLookup.put(source, new Node(source));
-        if(getNode(destination) == null)
-            nodeLookup.put(destination, new Node(destination));
-
         Node a = getNode(source);
         Node b = getNode(destination);
 

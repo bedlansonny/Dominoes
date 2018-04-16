@@ -12,7 +12,7 @@ public class Main
             int n = in.nextInt();
             int m = in.nextInt();
             int l = in.nextInt();
-            Graph dominoes = new Graph();
+            Graph dominoes = new Graph(n);
 
             for (int mi = 0; mi < m; mi++)
             {
@@ -28,11 +28,12 @@ public class Main
             }
 
             System.out.println(dominoes.knocked.size());
+
             /*
             Iterator itr = dominoes.knocked.iterator();
             while(itr.hasNext())
                 System.out.println(itr.next());
-            */
+                */
 
         }
     }
