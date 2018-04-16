@@ -38,7 +38,7 @@ public class Graph
         knocked.add(source);
         for(Node node : source.inFrontOf)
         {
-            if(!knocked.contains(node))
+            //if(!knocked.contains(node))
                 knock(node);
         }
 
@@ -51,6 +51,14 @@ public class Graph
         private Node(int id)
         {
             this.id = id;
+        }
+        public boolean equals(Node otherNode)
+        {
+            return this.id == otherNode.id;
+        }
+        public String toString()
+        {
+            return "" + id;
         }
     }
 }

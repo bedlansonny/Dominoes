@@ -28,6 +28,11 @@ public class Main
             }
 
             System.out.println(dominoes.knocked.size());
+            /*
+            Iterator itr = dominoes.knocked.iterator();
+            while(itr.hasNext())
+                System.out.println(itr.next());
+            */
 
         }
     }
